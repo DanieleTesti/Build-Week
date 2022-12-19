@@ -1,0 +1,21 @@
+body {
+  /* background-image: url("/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background: url("/assets/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 3em;
+  padding-left: 10em;
+}
+
+.logo {
+  height: 70px;
+  width: 250px;
+}
+
+.nextBtn {
+  color: #00ffff;
+  height: 50px;
+
+  width: 50px;
+}
