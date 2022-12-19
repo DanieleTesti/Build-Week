@@ -36,13 +36,15 @@ ul {
   margin-bottom: 5em;
 }
 
+main {
+  padding-left: 10em;
+}
 footer {
   padding-top: 4em;
-  display: flex;
-  justify-content: space-between;
+  padding-left: 10em;
 }
 
-footer > div {
+footer > form > div {
   display: inline;
 }
 
@@ -52,13 +54,17 @@ footer > div {
   /* appearance: none; */
 }
 
-footer > div > p {
+footer > form > div > p {
   display: inline;
   padding-left: 0.3em;
 }
 
-footer > form > button {
+form {
+  /* margin-left: 45em; */
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
   margin-right: 15em;
-  /* margin: 20%; */
-  /* padding: 2em; */
 }

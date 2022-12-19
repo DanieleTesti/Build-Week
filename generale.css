@@ -13,6 +13,8 @@ body {
 }
 
 .logo {
+  padding-left: 10em;
+  padding-top: 3em;
   /* height: 70px; */
   width: 250px;
 }
