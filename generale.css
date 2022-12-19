@@ -6,16 +6,22 @@ body {
   background-size: cover;
   padding-top: 3em;
   padding-left: 10em;
+  color: white;
 }
 
 .logo {
-  height: 70px;
+  height: 60px;
   width: 250px;
 }
 
 .nextBtn {
-  color: #00ffff;
-  height: 50px;
-
-  width: 50px;
+  color: #03005e;
+  background-color: #00ffff;
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
+  width: 200px;
+  height: 75px;
+  border: #00ffff;
+  /* box-shadow: 5px 5px 5px 5px #00ffff; */
 }
