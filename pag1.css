@@ -48,6 +48,7 @@ footer > div {
 
 .check {
   display: inline;
+  background-color: transparent;
   /* border: dashed white 1px; */
   /* appearance: none; */
 }
