@@ -57,7 +57,7 @@ footer > div > p {
   padding-left: 0.3em;
 }
 
-footer > button {
+footer > form > button {
   margin-right: 15em;
   /* margin: 20%; */
   /* padding: 2em; */
