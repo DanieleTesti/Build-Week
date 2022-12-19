@@ -6,6 +6,8 @@ body {
   background-size: cover;
   padding-top: 3em;
   padding-left: 10em;
+  color: white;
+  font-family: 'system-ui'
 }
 
 .logo {
@@ -18,4 +20,8 @@ body {
   height: 50px;
 
   width: 50px;
+}
+.tit1{
+  font-size: 3em;
+  font-weight: 400;
 }
