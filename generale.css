@@ -6,10 +6,10 @@ body {
   background-repeat: no-repeat; */
   background: url("/assets/bg.jpg") no-repeat center center fixed;
   background-size: cover;
-
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: "Inter", sans-serif;
+  padding-left: 0em;
 }
 
 .logo {
@@ -29,26 +29,4 @@ body {
   height: 75px;
   border: #00ffff;
   /* box-shadow: 5px 5px 5px 5px #00ffff; */
-}
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-size: 60px;
-}
-
-.tit1 {
-  font-weight: 400;
-}
-main {
-  text-align: center;
-  padding-top: 6em;
-}
-.tit2 {
-  margin-top: -1em;
-}
-footer {
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding-top: 15em;
 }
