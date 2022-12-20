@@ -114,30 +114,43 @@ const questions = [
 // startTimer();
 const question = document.getElementById("question");
 
-  // Recupera un numero casuale compreso tra 0 e il numero di domande nell'array
-  const randomIndex = Math.floor(Math.random() * questions.length);
+// Recupera un numero casuale compreso tra 0 e il numero di domande nell'array
+const randomIndex = Math.floor(Math.random() * questions.length);
 
-  // Recupera la domanda casuale dall'array
-  const randomQuestion = questions[randomIndex];
+// Recupera la domanda casuale dall'array
+const randomQuestion = questions[randomIndex];
 
-  // Recupera la risposta corretta e le risposte errate per la domanda casuale
-  const correctAnswer = randomQuestion.correct_answer;
-  const incorrectAnswers = randomQuestion.incorrect_answers;
+// Recupera la risposta corretta e le risposte errate per la domanda casuale
+const correctAnswer = randomQuestion.correct_answer;
+const incorrectAnswers = randomQuestion.incorrect_answers;
 
-  // Scegli a caso una delle risposte errate come prima opzione
-  const first = incorrectAnswers[Math.floor(Math.random() * incorrectAnswers.length)];
-  // Scegli a caso una delle risposte errate come seconda opzione, escludendo quella già scelta come prima opzione
-  const second = incorrectAnswers.filter(answer => answer !== first)[Math.floor(Math.random() * (incorrectAnswers.length - 1))];
-  // Scegli a caso una delle risposte errate come terza opzione, escludendo quelle già scelta come prima e seconda opzione
-  const third = incorrectAnswers.filter(answer => answer !== first && answer !== second)[Math.floor(Math.random() * (incorrectAnswers.length - 2))];
-  // La quarta opzione è la risposta corretta
-  const fourth = correctAnswer;
+// Scegli a caso una delle risposte errate come prima opzione
+const first =
+  incorrectAnswers[Math.floor(Math.random() * incorrectAnswers.length)];
+// Scegli a caso una delle risposte errate come seconda opzione, escludendo quella già scelta come prima opzione
+const second = incorrectAnswers.filter((answer) => answer !== first)[
+  Math.floor(Math.random() * (incorrectAnswers.length - 1))
+];
+// Scegli a caso una delle risposte errate come terza opzione, escludendo quelle già scelta come prima e seconda opzione
+const third = incorrectAnswers.filter(
+  (answer) => answer !== first && answer !== second
+)[Math.floor(Math.random() * (incorrectAnswers.length - 2))];
+// La quarta opzione è la risposta corretta
+const fourth = correctAnswer;
 
-  // Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
-  question.innerHTML = <h2>${randomQuestion.question}</h2>;
-    <ul class="option_group">
-    <li class="option"><input type="radio" name="answer" value="${first}">${first}</li>
-    <li class="option"><input type="radio" name="answer" value="${second}">${second}</li>
-    <li class="option"><input type="radio" name="answer" value="${third}">${third}</li>
-    <li class="option"><input type="radio" name="answer" value="${fourth}">${fourth}</li>
-    </ul>;
+// Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
+question.innerHTML = <h2>${randomQuestion.question}</h2>;
+<ul class="option_group">
+  <li class="option">
+    <input type="radio" name="answer" value="${first}" /> ${first}
+  </li>
+  <li class="option">
+    <input type="radio" name="answer" value="${second}" />${second}
+  </li>
+  <li class="option">
+    <input type="radio" name="answer" value="${third}" />${third}
+  </li>
+  <li class="option">
+    <input type="radio" name="answer" value="${fourth}" />${fourth}
+  </li>
+</ul>;
