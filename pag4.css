@@ -28,6 +28,10 @@ p {
   opacity: 0.5;
 }
 
+.stars:hover{
+  opacity: 1;
+}
+
 #input {
   background-color: transparent;
   border: none;
