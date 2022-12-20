@@ -25,7 +25,7 @@ p {
 }
 
 .stars{
-  fill:  blue;
+  opacity: 0.5;
 }
 
 #input {
