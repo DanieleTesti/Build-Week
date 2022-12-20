@@ -8,8 +8,6 @@
 // }
 
 
-
-
 function stelle() {
   const svg = `
   <svg class="stars" width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,26 +23,3 @@ function stelle() {
     }
     
     stelle();
-
-
-
-
-
-
-
-
-  // foto = document.createElement(" ");
-  // (foto.src = " width="),
-  //   47,
-  //   " height=",
-  //   46,
-  //   " viewBox=",
-  //   0,
-  //   0,
-  //   47,
-  //   46,
-  //   " fill=",
-  //   none;
-  // foto = document.createElement("img");
-  // foto.src = "./assets/star.svg";
-  // star.appendChild(foto);
