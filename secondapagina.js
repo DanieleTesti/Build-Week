@@ -139,7 +139,7 @@ const third = incorrectAnswers.filter(
 const fourth = correctAnswer;
 
 // Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
-question.innerHTML = <h2>${randomQuestion.question}</h2>;
+question.innerHTML = `<h2>${randomQuestion.question}</h2>
 <ul class="option_group">
   <li class="option">
     <input type="radio" name="answer" value="${first}" /> ${first}
@@ -153,4 +153,4 @@ question.innerHTML = <h2>${randomQuestion.question}</h2>;
   <li class="option">
     <input type="radio" name="answer" value="${fourth}" />${fourth}
   </li>
-</ul>;
+</ul>`;

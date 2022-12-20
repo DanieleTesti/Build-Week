@@ -20,37 +20,20 @@ footer {
   letter-spacing: 1px;
   padding-top: 15em;
 }
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-size: 60px;
-}
-
-.tit1 {
-  font-weight: 400;
-}
-main {
+ul,
+li {
   text-align: center;
-  padding-top: 6em;
-}
-.tit2 {
-  margin-top: -1em;
-}
-footer {
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding-top: 15em;
-}
-ul, li{
-  text-align: center;
-display: none;
-display: inline-block;
-margin: 0 10px 0 0;
-padding: 10px 20px;
-font-size: 18px;
-color: white;
-cursor: pointer;
+  display: none;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
   border: 1px solid #653579;
   border-radius: 50px;
+}
+
+.nextBtn {
+  border-radius: 10px;
 }
