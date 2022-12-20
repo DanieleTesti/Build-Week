@@ -17,12 +17,15 @@ p {
 #star {
   margin-top: 3em;
   margin-bottom: 8em;
-  opacity: 0.5;
+  
 }
 
 #star:hover {
   cursor: pointer;
-  opacity: 1;
+}
+
+.stars{
+  fill:  blue;
 }
 
 #input {
