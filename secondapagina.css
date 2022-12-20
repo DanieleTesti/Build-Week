@@ -30,10 +30,16 @@ li {
   font-size: 18px;
   color: white;
   cursor: pointer;
-  border: 1px solid #653579;
+  
   border-radius: 50px;
 }
 
 .nextBtn {
   border-radius: 10px;
+}
+ul{
+  border: none;
+}
+li{
+  border: 1px solid #653579;
 }
