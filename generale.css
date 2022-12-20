@@ -30,5 +30,5 @@ body {
   width: 200px;
   height: 75px;
   border: #00ffff;
-  /* box-shadow: 5px 5px 5px 5px #00ffff; */
+  box-shadow: 0px 0px 40px 10px #00ffff;
 }
