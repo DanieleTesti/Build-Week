@@ -112,6 +112,14 @@ const questions = [
 // }
 
 // startTimer();
+function shuffle(array) {
+  // Per mescolare l'array, utilizziamo l'algoritmo di Fisher-Yates
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const question = document.getElementById("question");
 
 // Recupera un numero casuale compreso tra 0 e il numero di domande nell'array
@@ -124,19 +132,17 @@ const randomQuestion = questions[randomIndex];
 const correctAnswer = randomQuestion.correct_answer;
 const incorrectAnswers = randomQuestion.incorrect_answers;
 
-// Scegli a caso una delle risposte errate come prima opzione
-const first =
-  incorrectAnswers[Math.floor(Math.random() * incorrectAnswers.length)];
-// Scegli a caso una delle risposte errate come seconda opzione, escludendo quella già scelta come prima opzione
-const second = incorrectAnswers.filter((answer) => answer !== first)[
-  Math.floor(Math.random() * (incorrectAnswers.length - 1))
-];
-// Scegli a caso una delle risposte errate come terza opzione, escludendo quelle già scelta come prima e seconda opzione
-const third = incorrectAnswers.filter(
-  (answer) => answer !== first && answer !== second
-)[Math.floor(Math.random() * (incorrectAnswers.length - 2))];
-// La quarta opzione è la risposta corretta
-const fourth = correctAnswer;
+// Aggiungi la risposta corretta alle risposte errate
+const answers = [correctAnswer, ...incorrectAnswers];
+
+// Mescola le risposte
+shuffle(answers);
+
+// Recupera le prime quattro risposte mescolate
+const first = answers[0];
+const second = answers[1];
+const third = answers[2];
+const fourth = answers[3];
 
 // Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
 question.innerHTML = `<h2>${randomQuestion.question}</h2>
