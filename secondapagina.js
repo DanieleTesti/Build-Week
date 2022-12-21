@@ -113,7 +113,7 @@ const questions = [
 
 // startTimer();
 function shuffle(array) {
-  // Per mescolare l'array, utilizziamo l'algoritmo di Fisher-Yates
+  // Mescola array
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -145,18 +145,32 @@ const third = answers[2];
 const fourth = answers[3];
 
 // Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
-question.innerHTML = `<h2>${randomQuestion.question}</h2>
-<ul class="option_group">
-  <li class="option">
-    <input type="radio" name="answer" value="${first}" /> ${first}
-  </li>
-  <li class="option">
-    <input type="radio" name="answer" value="${second}" />${second}
-  </li>
-  <li class="option">
-    <input type="radio" name="answer" value="${third}" />${third}
-  </li>
-  <li class="option">
-    <input type="radio" name="answer" value="${fourth}" />${fourth}
-  </li>
-</ul>`;
+if (randomQuestion.type === 'boolean') {
+  // Visualizza solo i pulsanti Vero e Falso
+  question.innerHTML = `<h2>${randomQuestion.question}</h2>
+  <ul class="option_group">
+    <li class="option">
+      <input type="radio" name="answer" value="true" /> Vero
+    </li>
+    <li class="option">
+      <input type="radio" name="answer" value="false" /> Falso
+    </li>
+  </ul>`;
+} else {
+  // Visualizza tutte le opzioni di risposta utilizzando i pulsanti radio
+  question.innerHTML = `<h2>${randomQuestion.question}</h2>
+  <ul class="option_group">
+    <li class="option">
+      <input type="radio" name="answer" value="${first}" /> ${first}
+    </li>
+    <li class="option">
+      <input type="radio" name="answer" value="${second}" />${second}
+    </li>
+    <li class="option">
+      <input type="radio" name="answer" value="${third}" />${third}
+    </li>
+    <li class="option">
+      <input type="radio" name="answer" value="${fourth}" />${fourth}
+    </li>
+  </ul>`;
+}
