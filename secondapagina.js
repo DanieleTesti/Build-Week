@@ -113,9 +113,6 @@ const questions = [
 
 // startTimer();
 
-
-
-
 let currentQuestionIndex = 0;
 
 function shuffle(array) {
@@ -149,12 +146,22 @@ function displayQuestion() {
 
 const nextBtn = document.querySelector(".nextBtn");
 nextBtn.addEventListener("click", () => {
+  document.getElementById("numeroDomanda").textContent =
+    currentQuestionIndex + 2;
   currentQuestionIndex++;
+  // const nuovoBottone = document.querySelector(".nextBtn");
+
   if (currentQuestionIndex === questions.length) {
-    console.log("Hai completato tutte le domande!");
+    // alert("Hai completato tutte le domande!");
+    document.querySelector(".nextBtn").textContent = "Vai ai risultati";
+    document.getElementById("numeroDomanda").textContent = "10";
+    // nextBtn.addEventListener("click", () => {
+    //   // location.href = "./pag3.html";
+    // });
+  } else if (currentQuestionIndex > questions.length) {
+    location.href = "./pag3.html";
   } else {
     displayQuestion();
   }
 });
-
 displayQuestion();
