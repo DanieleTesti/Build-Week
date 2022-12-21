@@ -182,7 +182,7 @@ nextBtn.addEventListener("click", () => {
   let risposte = document.querySelectorAll(".risposte");
   for (let i = 0; i < questions.length; i++) {
     risposte.addEventListener("click", () => {
-      arrayAnswer[i].push(risposte.textContent);
+      arrayAnswer.push(risposte.textContent);
     });
     for (let y = 0; y < questions.length; y++) {
       if (questions[y].correct_answer === arrayAnswer[y]) {
