@@ -152,10 +152,10 @@ if (randomQuestion.type === 'boolean') {
   question.innerHTML = `<h2>${randomQuestion.question}</h2>
   <ul class="option_group">
     <li class="option">
-      <input type="radio" name="answer" value="true" /> Vero
+      <input type="radio" name="answer" value="true" /> True
     </li>
     <li class="option">
-      <input type="radio" name="answer" value="false" /> Falso
+      <input type="radio" name="answer" value="false" /> False
     </li>
   </ul>`;
 } else {
