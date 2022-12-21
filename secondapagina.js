@@ -140,6 +140,7 @@ function displayQuestion() {
   for (const answer of answers) {
     const answerButton = document.createElement("button");
     answerButton.innerText = answer;
+    answerButton.classList= "risposte"
     answersElement.appendChild(answerButton);
   }
 }

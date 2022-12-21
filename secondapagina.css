@@ -7,6 +7,8 @@ h1 {
   font-weight: 400;
 }
 main {
+  margin-left: 10em;
+  margin-right: 10em;
   text-align: center;
   padding-top: 6em;
 }
@@ -35,6 +37,7 @@ li {
 }
 
 .nextBtn {
+  margin-top: 2em;
   border-radius: 10px;
 }
 ul {
@@ -43,3 +46,18 @@ ul {
 li {
   border: 1px solid #653579;
 }
+
+.risposte{
+  
+  background-color: transparent;
+  color:  white;
+  border: inset 3px white;
+  border-radius: 40px;
+  margin: 1em;
+  padding: 30px 120px 30px 120px;
+  /* -webkit-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
+-moz-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
+-o-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
+box-shadow: inset -1px 4px 27px -11px #F7FDFF; */
+}
+
