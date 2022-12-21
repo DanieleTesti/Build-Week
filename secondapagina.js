@@ -176,13 +176,13 @@ nextBtn.addEventListener("click", () => {
 });
 displayQuestion();
 
-let score = 0;
 nextBtn.addEventListener("click", () => {
+  let score = 0;
   let arrayAnswer = [];
   let risposte = document.querySelectorAll(".risposte");
   for (let i = 0; i < questions.length; i++) {
     risposte.addEventListener("click", () => {
-      arrayAnswer.push("risposte.textContent");
+      arrayAnswer[i].push(risposte.textContent);
     });
     for (let y = 0; y < questions.length; y++) {
       if (questions[y].correct_answer === arrayAnswer[y]) {
