@@ -94,7 +94,7 @@ const questions = [
   },
 ];
 
-//   window.onload = function () {};
+// window.onload = function () {};
 
 // let timer = 30;
 // let interval;
@@ -115,15 +115,6 @@ const questions = [
 
 let currentQuestionIndex = 0;
 
-function shuffle(array) {
-  // Per mescolare l'array
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
 function displayQuestion() {
   const question = questions[currentQuestionIndex];
 
@@ -131,6 +122,15 @@ function displayQuestion() {
 
   const answersElement = document.getElementById("answers");
   answersElement.innerHTML = "";
+
+  function shuffle(array) {
+    // Per mescolare l'array
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 
   const answers = shuffle([
     ...question.incorrect_answers,
@@ -140,7 +140,7 @@ function displayQuestion() {
   for (const answer of answers) {
     const answerButton = document.createElement("button");
     answerButton.innerText = answer;
-    answerButton.classList= "risposte"
+    answerButton.classList = "risposte";
     answersElement.appendChild(answerButton);
   }
 }
@@ -166,3 +166,19 @@ nextBtn.addEventListener("click", () => {
   }
 });
 displayQuestion();
+
+let score = 0;
+nextBtn.addEventListener("click", () => {
+  let arrayAnswer = [];
+  let risposte = document.querySelectorAll(".risposte");
+  for (let i = 0; i < questions.length; i++) {
+    risposte.addEventListener("click", () => {
+      arrayAnswer.push("risposte.textContent");
+    });
+    for (let y = 0; y < questions.length; y++) {
+      if (questions[y].correct_answer === arrayAnswer[y]) {
+        score++;
+      }
+    }
+  }
+});

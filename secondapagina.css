@@ -11,6 +11,7 @@ main {
   margin-right: 10em;
   text-align: center;
   padding-top: 6em;
+  height: 100%;
 }
 .tit2 {
   margin-top: -1em;
@@ -20,8 +21,12 @@ footer {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  padding-top: 15em;
+  /* padding-bottom: 5em;*/
+  position: absolute;
+  width: 99%;
+  bottom: 0;
 }
+
 ul,
 li {
   text-align: center;
@@ -39,6 +44,7 @@ li {
 .nextBtn {
   margin-top: 2em;
   border-radius: 10px;
+  margin-bottom: 3em;
 }
 ul {
   border: none;
@@ -47,17 +53,23 @@ li {
   border: 1px solid #653579;
 }
 
-.risposte{
-  
+.risposte {
   background-color: transparent;
-  color:  white;
-  border: inset 3px white;
+  color: white;
+  border: 3px white;
   border-radius: 40px;
   margin: 1em;
   padding: 30px 120px 30px 120px;
-  /* -webkit-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
+  -moz-box-shadow: 2px 0px 3px rgb(255, 255, 255);
+  -webkit-box-shadow: 2px 0px 3px rgb(255, 255, 255);
+  box-shadow: 2px 0px 3px rgb(255, 255, 255);
+}
+/* -webkit-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
 -moz-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
 -o-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
 box-shadow: inset -1px 4px 27px -11px #F7FDFF; */
-}
 
+.risposte:active,
+.risposte:focus {
+  background: #900080;
+}
