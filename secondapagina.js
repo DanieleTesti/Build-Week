@@ -176,18 +176,23 @@ nextBtn.addEventListener("click", () => {
 });
 displayQuestion();
 
-let score = 0;
-nextBtn.addEventListener("click", () => {
-  let arrayAnswer = [];
-  let risposte = document.querySelectorAll(".risposte");
-  for (let i = 0; i < questions.length; i++) {
-    risposte.addEventListener("click", () => {
-      arrayAnswer.push("risposte.textContent");
-    });
-    for (let y = 0; y < questions.length; y++) {
-      if (questions[y].correct_answer === arrayAnswer[y]) {
-        score++;
+function punteggio() {
+  let score = 0;
+  nextBtn.addEventListener("click", () => {
+    let arrayAnswer = [];
+    let risposte = document.querySelectorAll(".risposte");
+    for (let i = 0; i < questions.length; i++) {
+      nextBtn.addEventListener("click", () => {
+        arrayAnswer.push(risposte.textContent);
+        console.log(score);
+        console.log(arrayAnswer);
+      });
+      for (let y = 0; y < questions.length; y++) {
+        if (questions[y].correct_answer === arrayAnswer[y]) {
+          score++;
+        }
       }
     }
-  }
-});
+  });
+}
+punteggio();
