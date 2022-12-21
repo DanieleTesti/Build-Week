@@ -114,76 +114,47 @@ const questions = [
 // startTimer();
 
 
+
+
+let currentQuestionIndex = 0;
+
 function shuffle(array) {
   // Per mescolare l'array
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
 }
 
-const question = document.getElementById("question");
+function displayQuestion() {
+  const question = questions[currentQuestionIndex];
 
-// Recupera un numero casuale compreso tra 0 e il numero di domande nell'array
-const randomIndex = Math.floor(Math.random() * questions.length);
+  document.querySelector(".tit1").innerHTML = question.question;
 
-// Recupera la domanda casuale dall'array
-const randomQuestion = questions[randomIndex];
+  const answersElement = document.getElementById("answers");
+  answersElement.innerHTML = "";
 
-// Recupera la risposta corretta e le risposte errate per la domanda casuale
-const correctAnswer = randomQuestion.correct_answer;
-const incorrectAnswers = randomQuestion.incorrect_answers;
+  const answers = shuffle([
+    ...question.incorrect_answers,
+    question.correct_answer,
+  ]);
 
-// Aggiungi la risposta corretta alle risposte errate
-const answers = [correctAnswer, ...incorrectAnswers];
-
-// Mescola le risposte
-shuffle(answers);
-
-// Recupera le prime quattro risposte mescolate
-const first = answers[0];
-const second = answers[1];
-const third = answers[2];
-const fourth = answers[3];
-
-// Visualizza la domanda e le opzioni di risposta utilizzando i pulsanti radio
-if (randomQuestion.type === 'boolean') {
-  // Visualizza solo i pulsanti Vero e Falso
-  question.innerHTML = `<h2>${randomQuestion.question}</h2>
-  <ul class="option_group">
-    <li class="option">
-      <input type="radio" name="answer" value="true" /> True
-    </li>
-    <li class="option">
-      <input type="radio" name="answer" value="false" /> False
-    </li>
-  </ul>`;
-} else {
-  // Visualizza tutte le opzioni di risposta utilizzando i pulsanti radio
-  question.innerHTML = `<h2>${randomQuestion.question}</h2>
-  <ul class="option_group">
-    <li class="option">
-      <input type="radio" name="answer" value="${first}" /> ${first}
-    </li>
-    <li class="option">
-      <input type="radio" name="answer" value="${second}" />${second}
-    </li>
-    <li class="option">
-      <input type="radio" name="answer" value="${third}" />${third}
-    </li>
-    <li class="option">
-      <input type="radio" name="answer" value="${fourth}" />${fourth}
-    </li>
-  </ul>`;
+  for (const answer of answers) {
+    const answerButton = document.createElement("button");
+    answerButton.innerText = answer;
+    answersElement.appendChild(answerButton);
+  }
 }
-const nextBtn = document.querySelector('.nextBtn');
-let currentQuestion = 0;
-function showQuestion(questionIndex) {
-  const q = questions[questionIndex];
-  question.innerHTML = q.question;
-}
-showQuestion(currentQuestion);
-nextBtn.addEventListener('click', () => {
-  currentQuestion++;
-  showQuestion(currentQuestion);
+
+const nextBtn = document.querySelector(".nextBtn");
+nextBtn.addEventListener("click", () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex === questions.length) {
+    console.log("Hai completato tutte le domande!");
+  } else {
+    displayQuestion();
+  }
 });
+
+displayQuestion();
