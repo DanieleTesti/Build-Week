@@ -112,8 +112,10 @@ const questions = [
 // }
 
 // startTimer();
+
+
 function shuffle(array) {
-  // Mescola array
+  // Per mescolare l'array, utilizziamo l'algoritmo di Fisher-Yates
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
