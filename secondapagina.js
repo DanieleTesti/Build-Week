@@ -114,7 +114,7 @@ const questions = [
 // startTimer();
 
 let currentQuestionIndex = 0;
-
+let score = 0;
 function shuffle(array) {
   // Per mescolare l'array
   for (let i = array.length - 1; i > 0; i--) {
@@ -166,3 +166,18 @@ nextBtn.addEventListener("click", () => {
   }
 });
 displayQuestion();
+
+
+let scoreElement = document.createElement("div");
+scoreElement.innerHTML = "Punteggio: " + score;
+document.body.appendChild(scoreElement);
+
+if (userAnswer === correct_answer) {
+  incrementScore();
+}
+
+// Funzione per aumentare il punteggio di 1 e aggiornare il punteggio mostrato all'utente
+function incrementScore() {
+  score++;
+  scoreElement.innerHTML = "Punteggio: " + score;
+}
