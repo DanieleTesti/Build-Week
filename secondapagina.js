@@ -115,7 +115,7 @@ const questions = [
 
 
 function shuffle(array) {
-  // Per mescolare l'array, utilizziamo l'algoritmo di Fisher-Yates
+  // Per mescolare l'array
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -176,3 +176,14 @@ if (randomQuestion.type === 'boolean') {
     </li>
   </ul>`;
 }
+const nextBtn = document.querySelector('.nextBtn');
+let currentQuestion = 0;
+function showQuestion(questionIndex) {
+  const q = questions[questionIndex];
+  question.innerHTML = q.question;
+}
+showQuestion(currentQuestion);
+nextBtn.addEventListener('click', () => {
+  currentQuestion++;
+  showQuestion(currentQuestion);
+});
