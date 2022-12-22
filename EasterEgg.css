@@ -1,10 +1,18 @@
+.logo{
+    margin-bottom: 3em;
+}
+main{
+    
+    width: 100%;
+    text-align: center;
+}
 .container{
     display: flex;
-    align-items: flex-end
+    justify-content: space-around;
 
 }
 .fotoselfie{
-    width: 20%;
-    height: 20%;
-    
+    margin-top: 10em;
+    height: 15em;
+    width: 15em;
 }
