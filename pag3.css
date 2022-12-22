@@ -38,3 +38,7 @@ h2 {
 #rateUs {
   cursor: pointer;
 }
+#correct-percentage, #wrong-percentage{
+  font-size: 40px;
+  font-family: "Outfit", sans-serif;
+}
