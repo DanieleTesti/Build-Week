@@ -150,6 +150,7 @@ function displayQuestion() {
     const answerButton = document.createElement("button");
     answerButton.innerText = answer;
     answerButton.classList = "risposte";
+    // onclick event.target.classlist.add
     answersElement.appendChild(answerButton);
   }
 }
@@ -197,3 +198,4 @@ function punteggio() {
   });
 }
 punteggio();
+
