@@ -8,7 +8,7 @@ let x = canvas.width/10;
 let y = canvas.height/10;
 ctx.translate(x,y);
 const totalQuestions = 10;
-const correctAnswers = 5;
+const correctAnswers = 4;
 const wrongAnswers = totalQuestions - correctAnswers
 const correctPercentage = (correctAnswers / totalQuestions) * 100;
 const wrongPercentage = 100 - correctPercentage;
@@ -76,6 +76,11 @@ ctx.textBaseline = "middle";  // posiziona il testo al centro verticalmente
 // if (line.length > 0) {
 //   ctx.fillText(line, num1, num2);
 // }
-const words = ctx.fillText(`Congratulations! You passed the exam.`, 150, 150).split(' ');
 
+if (correctPercentage < 50) {
+    ctx.fillText(`Ti sentirai con Chiara o Marina...`, 150, 150).split(' '); //Easter Egg
+  } else {
+    ctx.fillText(`Congratulations! You passed the exam.`, 150, 150).split(' ');
+  }
+  ctx.fillText(testoCerchio, 150, 150);
 
