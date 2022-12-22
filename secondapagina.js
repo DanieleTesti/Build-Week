@@ -141,35 +141,61 @@ function displayQuestion() {
     return array;
   }
 
+
+
   const answers = shuffle([
     ...question.incorrect_answers,
     question.correct_answer,
   ]);
+
+
+
+  
+  function punteggio() {
+    let score = 0;
+    let risposte = document.querySelectorAll(".risposte");
+    let arrayAnswer = [];
+    risposte.forEach((answer) => {
+      answer.addEventListener("click", (event) => {
+        arrayAnswer.push(event.target.textContent);
+        console.log(arrayAnswer);
+      });
+    });
+    console.log(score);
+    for (let y = 0; y < questions.length; y++) {
+      if (questions[y].correct_answer === arrayAnswer[y]) {
+        score++;
+      }
+    }
+  }
+
+
+
+
 
   for (const answer of answers) {
     punteggio();
     const answerButton = document.createElement("button");
     answerButton.innerText = answer;
     answerButton.classList = "risposte";
-    // onclick event.target.classlist.add
     answersElement.appendChild(answerButton);
   }
 }
+
+
+
 
 const nextBtn = document.querySelector(".nextBtn");
 nextBtn.addEventListener("click", () => {
   document.getElementById("numeroDomanda").textContent =
     currentQuestionIndex + 2;
   currentQuestionIndex++;
-  // const nuovoBottone = document.querySelector(".nextBtn");
-
+  
   if (currentQuestionIndex === questions.length) {
     // alert("Hai completato tutte le domande!");
     document.querySelector(".nextBtn").textContent = "Vai ai risultati";
     document.getElementById("numeroDomanda").textContent = "10";
-    // nextBtn.addEventListener("click", () => {
-    //   // location.href = "./pag3.html";
-    // });
+   
   } else if (currentQuestionIndex > questions.length) {
     location.href = "./pag3.html";
   } else {
@@ -178,90 +204,5 @@ nextBtn.addEventListener("click", () => {
 });
 displayQuestion();
 
-// function punteggio() {
-//   let score = 0;
-//   nextBtn.addEventListener("click", (event) => {
-//     let bottoneCliccato = event.target
-//     let arrayAnswer = [];
-//     let risposte = document.querySelectorAll(".risposte");
-//     // for (let i = 0; i < questions.length; i++) {
-//     // nextBtn.addEventListener("click", () => {
-//     arrayAnswer.push(bottoneCliccato.textContent);
-//     console.log(score);
-//     console.log(arrayAnswer);
-//     // });
-//     for (let y = 0; y < questions.length; y++) {
-//       if (questions[y].correct_answer === arrayAnswer[y]) {
-//         score++;
-//       }
-//     }
-//     // }
-//   });
-// }
-// punteggio();
 
-// risposte.addEventListener("click", (event) => {
-// const selezionaRisposta = function () {
-//   const risposte = document.querySelectorAll(".risposte");
-//   risposte.forEach((risposte) => {
-//     risposte.addEventListener("click", (event) => {
-//       let nuovaRisposta = event.target;
-//       // nuovaRisposta.classList.add("rispostaCliccata");
-//     });
-//   });
 
-// console.log("evento bottone", bottoneSelezionato);
-
-// const risposte = document.querySelectorAll(".risposte");
-// console.log(btncreati);
-
-// rispostaCliccata.classList.add("rispostaCliccata");
-// rispostaCliccata.classList.remove("risposte");
-
-// nextBtn.addEventListener("click", () => {
-
-// let bottoneCliccato = event.target;
-
-// let arrayAnswer = [];
-
-// let risposte = document.querySelectorAll(".risposte");
-// for (let i = 0; i < questions.length; i++) {
-// nextBtn.addEventListener("click", () => {
-
-// arrayAnswer.push(nuovaRisposta.textContent);
-function punteggio() {
-  let score = 0;
-  //   let bottone = document.querySelector(".nextBtn");
-  //   let risposte = document.querySelectorAll(".risposte");
-  //   let arrayAnswer = [];
-
-  //   for (let i = 0; i < questions.length; i++) {
-  //     function selezionaRisposta(e) {
-  //       const bottoneSelezionato = e.target;
-  //       bottoneSelezionato.addEventListener("click", (event) => {
-  //         arrayAnswer.push(event.target.textContent);
-  //       });
-  // }
-
-  // risposte.forEach((bottone) => {
-  //   answer.addEventListener("click", (event) => {
-  //     arrayAnswer.push(event.target.textContent);
-  //     console.log(arrayAnswer);
-  //   });
-  // });
-  let risposte = document.querySelectorAll(".risposte");
-  let arrayAnswer = [];
-  risposte.forEach((answer) => {
-    answer.addEventListener("click", (event) => {
-      arrayAnswer.push(event.target.textContent);
-      console.log(arrayAnswer);
-    });
-  });
-  console.log(score);
-  for (let y = 0; y < questions.length; y++) {
-    if (questions[y].correct_answer === arrayAnswer[y]) {
-      score++;
-    }
-  }
-}
-punteggio();
