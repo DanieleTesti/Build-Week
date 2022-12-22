@@ -18,8 +18,8 @@ const correctDiv = document.getElementById('correct-percentage');
 const wrongDiv = document.getElementById('wrong-percentage');
 
 // Imposta il contenuto dei div con le percentuali
-correctDiv.innerHTML = `<div><span>Correct</span></div> <b>${correctPercentage}%</b> <div>${correctAnswers} / ${totalQuestions} questions</div>`;
-wrongDiv.innerHTML = `<div><span>Wrong</span></div> <b>${wrongPercentage}%</b><div>${wrongAnswers} / ${totalQuestions} questions</div>`;
+correctDiv.innerHTML = `<div><span>Correct</span></div> <b>${correctPercentage}%</b> <div id="ciao">${correctAnswers} / ${totalQuestions} questions</div>`;
+wrongDiv.innerHTML = `<div><span>Wrong</span></div> <b>${wrongPercentage}%</b><div id="ciao">${wrongAnswers} / ${totalQuestions} questions</div>`;
 
 ctx.beginPath();
 ctx.arc(150, 150, 150, 0, (correctPercentage / 100) * 2 * Math.PI);
