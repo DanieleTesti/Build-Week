@@ -16,6 +16,9 @@ main div h1 span {
 #container {
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 h2 {
@@ -41,6 +44,9 @@ h2 {
 #correct-percentage, #wrong-percentage{
   font-size: 40px;
   font-family: "Outfit", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
 #ciao{
         
