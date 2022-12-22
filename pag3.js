@@ -8,8 +8,8 @@ let x = canvas.width/10;
 let y = canvas.height/10;
 ctx.translate(x,y);
 const totalQuestions = 10;
-const correctAnswers = 8;
-const wrongAnswers = 2;
+const correctAnswers = 5;
+const wrongAnswers = totalQuestions - correctAnswers
 const correctPercentage = (correctAnswers / totalQuestions) * 100;
 const wrongPercentage = 100 - correctPercentage;
 
