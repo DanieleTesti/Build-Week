@@ -147,6 +147,7 @@ function displayQuestion() {
   ]);
 
   for (const answer of answers) {
+    punteggio();
     const answerButton = document.createElement("button");
     answerButton.innerText = answer;
     answerButton.classList = "risposte";
@@ -177,26 +178,90 @@ nextBtn.addEventListener("click", () => {
 });
 displayQuestion();
 
+// function punteggio() {
+//   let score = 0;
+//   nextBtn.addEventListener("click", (event) => {
+//     let bottoneCliccato = event.target
+//     let arrayAnswer = [];
+//     let risposte = document.querySelectorAll(".risposte");
+//     // for (let i = 0; i < questions.length; i++) {
+//     // nextBtn.addEventListener("click", () => {
+//     arrayAnswer.push(bottoneCliccato.textContent);
+//     console.log(score);
+//     console.log(arrayAnswer);
+//     // });
+//     for (let y = 0; y < questions.length; y++) {
+//       if (questions[y].correct_answer === arrayAnswer[y]) {
+//         score++;
+//       }
+//     }
+//     // }
+//   });
+// }
+// punteggio();
+
+// risposte.addEventListener("click", (event) => {
+// const selezionaRisposta = function () {
+//   const risposte = document.querySelectorAll(".risposte");
+//   risposte.forEach((risposte) => {
+//     risposte.addEventListener("click", (event) => {
+//       let nuovaRisposta = event.target;
+//       // nuovaRisposta.classList.add("rispostaCliccata");
+//     });
+//   });
+
+// console.log("evento bottone", bottoneSelezionato);
+
+// const risposte = document.querySelectorAll(".risposte");
+// console.log(btncreati);
+
+// rispostaCliccata.classList.add("rispostaCliccata");
+// rispostaCliccata.classList.remove("risposte");
+
+// nextBtn.addEventListener("click", () => {
+
+// let bottoneCliccato = event.target;
+
+// let arrayAnswer = [];
+
+// let risposte = document.querySelectorAll(".risposte");
+// for (let i = 0; i < questions.length; i++) {
+// nextBtn.addEventListener("click", () => {
+
+// arrayAnswer.push(nuovaRisposta.textContent);
 function punteggio() {
   let score = 0;
-  nextBtn.addEventListener("click", (event) => {
-    let bottoneCliccato = event.target
-    let arrayAnswer = [];
-    let risposte = document.querySelectorAll(".risposte");
-    // for (let i = 0; i < questions.length; i++) {
-    // nextBtn.addEventListener("click", () => {
-    arrayAnswer.push(bottoneCliccato.textContent);
-    console.log(score);
-    console.log(arrayAnswer);
-    // });
-    for (let y = 0; y < questions.length; y++) {
-      if (questions[y].correct_answer === arrayAnswer[y]) {
-        score++;
-      }
-    }
-    // }
+  //   let bottone = document.querySelector(".nextBtn");
+  //   let risposte = document.querySelectorAll(".risposte");
+  //   let arrayAnswer = [];
+
+  //   for (let i = 0; i < questions.length; i++) {
+  //     function selezionaRisposta(e) {
+  //       const bottoneSelezionato = e.target;
+  //       bottoneSelezionato.addEventListener("click", (event) => {
+  //         arrayAnswer.push(event.target.textContent);
+  //       });
+  // }
+
+  // risposte.forEach((bottone) => {
+  //   answer.addEventListener("click", (event) => {
+  //     arrayAnswer.push(event.target.textContent);
+  //     console.log(arrayAnswer);
+  //   });
+  // });
+  let risposte = document.querySelectorAll(".risposte");
+  let arrayAnswer = [];
+  risposte.forEach((answer) => {
+    answer.addEventListener("click", (event) => {
+      arrayAnswer.push(event.target.textContent);
+      console.log(arrayAnswer);
+    });
   });
+  console.log(score);
+  for (let y = 0; y < questions.length; y++) {
+    if (questions[y].correct_answer === arrayAnswer[y]) {
+      score++;
+    }
+  }
 }
 punteggio();
- 
-
