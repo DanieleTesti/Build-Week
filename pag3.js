@@ -34,47 +34,6 @@ ctx.fillStyle = "white"; // imposta il colore del testo
 ctx.font = "12px sans-serif"; // imposta il font del testo
 ctx.textAlign = "center"; // allinea il testo al centro
 ctx.textBaseline = "middle"; // posiziona il testo al centro verticalmente
-//  const maxCharsPerLine = 25;
-
-// // // Dividi il testo in parole
-//  const words = ctx.fillText(`Congratulations! You passed the exam. We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)`, 150, 150).split(' ');
-
-// // let line = '';
-
-// // // Per ogni parola, verifica se può essere aggiunta alla linea corrente senza superare il numero massimo di caratteri per linea
-// // for (const word of words) {
-// //   if (line.length + word.length > maxCharsPerLine) {
-// //     // Se non ci sta, stampa la linea corrente e inizia una nuova linea
-// //     ctx.fillText(line, 150, 150);
-// //     line = '';
-// //   }
-// //   // Aggiungi la parola alla linea corrente
-// //   line += `${word} `;
-// // }
-
-// // // Stampa la ultima linea, se presente
-// // if (line.length > 0) {
-// //   ctx.fillText(line, 150, 150);
-// // }
-// // const words = `Congratulations! You passed the exam. We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)`.split(' ');
-// let num1 = 150;
-// let num2 = 150;
-
-// for (const word of words) {
-//   if (line.length + word.length > maxCharsPerLine) {
-//     // Se non ci sta, stampa la linea corrente e inizia una nuova linea
-//     ctx.fillText(line, num1, num2);
-//     line = '';
-//     y += 20;  // Aggiorna la posizione per la nuova riga
-//   }
-//   // Aggiungi la parola alla linea corrente
-//   line += `${word} `;
-// }
-
-// // Stampa la ultima linea, se presente
-// if (line.length > 0) {
-//   ctx.fillText(line, num1, num2);
-// }
 
 if (correctPercentage < 50) {
   ctx.fillText(`Ti sentirai con Chiara o Marina...`, 150, 150).split(" "); //Easter Egg
