@@ -50,6 +50,7 @@ footer > form > div {
 
 .check {
   display: inline;
+  border: 1px solid white;
   background-color: transparent;
   /* border: dashed white 1px; */
   /* appearance: none; */

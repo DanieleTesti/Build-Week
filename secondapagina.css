@@ -44,7 +44,7 @@ li {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 80%;
+  width: 90%;
 }
 
 .nextBtn {
@@ -65,8 +65,8 @@ li {
   border: 3px white;
   border-radius: 40px;
   margin: 1em;
-  margin-right: 8em;
-  margin-left: 8em;
+  margin-right: 6em;
+  margin-left: 6em;
   height: 6em;
   width: 25em;
   -moz-box-shadow: 2px 0px 3px rgb(255, 255, 255);
