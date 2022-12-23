@@ -21,8 +21,7 @@ footer {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  /* padding-bottom: 5em; */
-  position: fixed;
+  margin-top: 5em;
   width: 99%;
   bottom: 0;
 }
@@ -51,7 +50,7 @@ li {
 .nextBtn {
   margin-top: 2em;
   border-radius: 10px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 ul {
   border: none;
