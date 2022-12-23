@@ -46,3 +46,6 @@ p {
   outline: none;
   color: white;
 }
+.selected {
+  fill: orange;
+}
