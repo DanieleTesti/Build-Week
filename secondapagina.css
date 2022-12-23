@@ -21,13 +21,13 @@ footer {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  padding-bottom: 5em;
+  /* padding-bottom: 5em; */
   position: fixed;
   width: 99%;
   bottom: 0;
 }
 
-ul,
+/* ul,
 li {
   text-align: center;
   display: none;
@@ -39,6 +39,13 @@ li {
   cursor: pointer;
 
   border-radius: 50px;
+} */
+
+#answers{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
 }
 
 .nextBtn {
@@ -59,17 +66,17 @@ li {
   border: 3px white;
   border-radius: 40px;
   margin: 1em;
+  margin-right: 8em;
+  margin-left: 8em;
   padding: 30px 120px 30px 120px;
   -moz-box-shadow: 2px 0px 3px rgb(255, 255, 255);
   -webkit-box-shadow: 2px 0px 3px rgb(255, 255, 255);
   box-shadow: 2px 0px 3px rgb(255, 255, 255);
 }
-/* -webkit-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
--moz-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
--o-box-shadow: inset -1px 4px 27px -11px #F7FDFF;
-box-shadow: inset -1px 4px 27px -11px #F7FDFF; */
+
 
 .risposte:active,
-.risposte:focus {
+.risposte:focus,
+.risposte:hover {
   background: #900080;
 }
