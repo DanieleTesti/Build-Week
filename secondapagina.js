@@ -156,11 +156,7 @@ function displayQuestion() {
       })
     })
     
-    // for (let y = 0; y < questions.length; y++) {
-    //   if (questions[y].correct_answer === arrayAnswer[y]) {
-    //     score++
-    //   }
-    // }
+    
   }
 
   for (const answer of answers) {
