@@ -11,25 +11,7 @@ function stelle() {
   }
 
 }
-    
-stelle();
-function onStarClick(event) {
-  // estrai il numero di stella dalla classe dell'elemento cliccato
-  const starNumber = event.target.classList[1].split("_")[1];
-  // seleziona tutte le stelle
-  const stars = document.querySelectorAll(".stars");
-  // per ogni stella, se il suo numero è minore o uguale al numero della stella cliccata, aggiungi la classe "selected"
-  for (let i = 0; i < Number(starNumber); i++) {
-    stars[i].classList.add("selected");
-  }
-  // per ogni stella successiva alla stella cliccata, rimuovi la classe "selected"
-  for (let i = Number(starNumber); i < stars.length; i++) {
-    stars[i].classList.remove("selected");
-  }
-}
-
-
-
+stelle() 
 
 
 // //onclick, prendi la classe della stellina cliccata => event.target.classList[1]
@@ -41,14 +23,11 @@ function onStarClick(event) {
 
 
 
-
-
-function onStarClick(event) {
+  stars.addEventListener("click", (event) => {
   // seleziona tutte le stelle
-  const starNumber = document.querySelectorAll(".stars_${i}");
   const stars = document.querySelectorAll(".stars");
   // estrai il numero di stella dalla classe dell'elemento cliccato
-  starNumber = event.target.classList[1].split("_")[1];
+  const starNumber = event.target.classList[1].split("_")[1];
   // per ogni stella, se il suo numero è minore o uguale al numero della stella cliccata, aggiungi la classe "selected"
   for (let i = 0; i < Number(starNumber); i++) {
     stars[i].classList.add("selected");
@@ -57,5 +36,5 @@ function onStarClick(event) {
   for (let i = Number(starNumber); i < stars.length; i++) {
     stars[i].classList.remove("selected");
   }
-}
-onStarClick()
+  console.log();
+})
