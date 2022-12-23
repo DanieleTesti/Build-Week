@@ -42,9 +42,9 @@ p {
   margin-bottom: 5em;
 }
 
-#input:focus {
-  outline: none;
-  color: white;
+.selected{
+  fill: blue;
+  opacity: 1;
 }
 .selected {
   fill: orange;

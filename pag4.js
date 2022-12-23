@@ -29,7 +29,33 @@ function onStarClick(event) {
 }
 
 
-//onclick, prendi la classe della stellina cliccata => event.target.classList[1]
+
+
+
+// //onclick, prendi la classe della stellina cliccata => event.target.classList[1]
 // stars e stars_2 => .split(_) => ["stars", "2"] => [1] === "2"
-//querySelectorAll => prendi tutte le stelline 
-//for(let i = 0 ; i < Number("2")) => aggiungi il colore
+// querySelectorAll => 
+// // prendi tutte le stelline 
+// for(let i = 0 ; i < Number("2")) => 
+// // aggiungi il colore
+
+
+
+
+
+function onStarClick(event) {
+  // seleziona tutte le stelle
+  const starNumber = document.querySelectorAll(".stars_${i}");
+  const stars = document.querySelectorAll(".stars");
+  // estrai il numero di stella dalla classe dell'elemento cliccato
+  starNumber = event.target.classList[1].split("_")[1];
+  // per ogni stella, se il suo numero è minore o uguale al numero della stella cliccata, aggiungi la classe "selected"
+  for (let i = 0; i < Number(starNumber); i++) {
+    stars[i].classList.add("selected");
+  }
+  // per ogni stella successiva alla stella cliccata, rimuovi la classe "selected"
+  for (let i = Number(starNumber); i < stars.length; i++) {
+    stars[i].classList.remove("selected");
+  }
+}
+onStarClick()
