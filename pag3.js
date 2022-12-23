@@ -88,6 +88,9 @@ if (correctPercentage < 50) {
   // ctx.fillText(`HELLOOOOOOOOOOOOOOOOO...`, 150, 170) //Easter Egg
   // ctx.fillText(`Terza riga forse dai`, 150, 200) //Easter Egg
 
+
+
+  
   // let testoCerchio =
   //   "Se sei stato bocciato farai un esame nella build week, please no panic okay? Okay grazie a domani"
   // let riga = ""
