@@ -38,7 +38,7 @@ ctx.textBaseline = "middle"; // posiziona il testo al centro verticalmente
 if (correctPercentage < 50) {
   ctx.fillText(`Ti sentirai con Chiara o Marina...`, 150, 150).split(" "); //Easter Egg
 } else {
-  ctx.fillText(`Congratulations! You passed the exam.`, 150, 150).split(" ");
+  ctx.fillText(`Che culo, Lidia sarebbefiera di te.`, 150, 150).split(" ");
 }
 ctx.fillText(testoCerchio, 150, 150);
 
