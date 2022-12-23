@@ -92,7 +92,7 @@ const questions = [
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
-];
+]
 
 // window.onload = function () {};
 
@@ -113,96 +113,88 @@ const questions = [
 
 // startTimer();
 
-let currentQuestionIndex = 0;
+let currentQuestionIndex = 0
 
 function shuffle(array) {
   // Per mescolare l'array
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
+  return array
 }
-
+let score = 0
+let arrayAnswer = []
 function displayQuestion() {
-  const question = questions[currentQuestionIndex];
+  const question = questions[currentQuestionIndex]
 
-  document.querySelector(".tit1").innerHTML = question.question;
+  document.querySelector(".tit1").innerHTML = question.question
 
-  const answersElement = document.getElementById("answers");
-  answersElement.innerHTML = "";
+  const answersElement = document.getElementById("answers")
+  answersElement.innerHTML = ""
 
   function shuffle(array) {
     // Per mescolare l'array
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[array[i], array[j]] = [array[j], array[i]]
     }
-    return array;
+    return array
   }
-
-
 
   const answers = shuffle([
     ...question.incorrect_answers,
     question.correct_answer,
-  ]);
+  ])
 
-
-
-  
   function punteggio() {
-    let score = 0;
-    let risposte = document.querySelectorAll(".risposte");
-    let arrayAnswer = [];
+    let risposte = document.querySelectorAll(".risposte")
     risposte.forEach((answer) => {
       answer.addEventListener("click", (event) => {
-        arrayAnswer.push(event.target.textContent);
-        console.log(arrayAnswer);
-      });
-    });
-    console.log(score);
-    for (let y = 0; y < questions.length; y++) {
-      if (questions[y].correct_answer === arrayAnswer[y]) {
-        score++;
-      }
-    }
+        arrayAnswer.push(event.target.textContent)
+        console.log(arrayAnswer)
+      })
+    })
+    
+    // for (let y = 0; y < questions.length; y++) {
+    //   if (questions[y].correct_answer === arrayAnswer[y]) {
+    //     score++
+    //   }
+    // }
   }
-
-
-
-
 
   for (const answer of answers) {
-    punteggio();
-    const answerButton = document.createElement("button");
-    answerButton.innerText = answer;
-    answerButton.classList = "risposte";
-    answersElement.appendChild(answerButton);
+    const answerButton = document.createElement("button")
+    answerButton.innerText = answer
+    answerButton.classList = "risposte"
+    answersElement.appendChild(answerButton)
   }
+
+  punteggio()
 }
 
-
-
-
-const nextBtn = document.querySelector(".nextBtn");
+const nextBtn = document.querySelector(".nextBtn")
 nextBtn.addEventListener("click", () => {
   document.getElementById("numeroDomanda").textContent =
-    currentQuestionIndex + 2;
-  currentQuestionIndex++;
-  
+    currentQuestionIndex + 2
+  currentQuestionIndex++
+
   if (currentQuestionIndex === questions.length) {
     // alert("Hai completato tutte le domande!");
-    document.querySelector(".nextBtn").textContent = "Vai ai risultati";
-    document.getElementById("numeroDomanda").textContent = "10";
-   
+    document.querySelector(".nextBtn").textContent = "Vai ai risultati"
+    document.getElementById("numeroDomanda").textContent = "10"
   } else if (currentQuestionIndex > questions.length) {
-    location.href = "./pag3.html";
+    
+    for (let y = 0; y < questions.length; y++) {
+      if (questions[y].correct_answer === arrayAnswer[y]) {
+        score++
+      }
+    }
+    console.log(score)
+    location.href = `./pag3.html?risposteGiuste=${score}&max=${questions.length}`
+    
   } else {
-    displayQuestion();
+    displayQuestion()
   }
-});
-displayQuestion();
-
-
-
+})
+displayQuestion()

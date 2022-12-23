@@ -84,3 +84,19 @@ if (correctPercentage < 50) {
   }
   ctx.fillText(testoCerchio, 150, 150);
 
+// ctx.fillText(`Ti sentirai con Chiara o Marina...`, 150, 150) //Easter Egg
+  // ctx.fillText(`HELLOOOOOOOOOOOOOOOOO...`, 150, 170) //Easter Egg
+  // ctx.fillText(`Terza riga forse dai`, 150, 200) //Easter Egg
+
+  // let testoCerchio =
+  //   "Se sei stato bocciato farai un esame nella build week, please no panic okay? Okay grazie a domani"
+  // let riga = ""
+  // let numeroRiga = 1
+  // testoCerchio.split(" ").forEach((parola, i) => {
+  //   riga += parola + " "
+  //   if (i % 5 === 0) {
+  //     ctx.fillText(riga, 150, 150 + 20 * numeroRiga) //Easter Egg
+  //     riga = ""
+  //     numeroRiga++
+  //   }
+  // })

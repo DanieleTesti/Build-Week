@@ -14,3 +14,7 @@ function stelle() {
     
 stelle();
 
+//onclick, prendi la classe della stellina cliccata => event.target.classList[1]
+// stars e stars_2 => .split(_) => ["stars", "2"] => [1] === "2"
+//querySelectorAll => prendi tutte le stelline 
+//for(let i = 0 ; i < Number("2")) => aggiungi il colore
