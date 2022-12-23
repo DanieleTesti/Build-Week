@@ -21,8 +21,8 @@ footer {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  /* padding-bottom: 5em;*/
-  /* position: absolute; */
+  padding-bottom: 5em;
+  position: fixed;
   width: 99%;
   bottom: 0;
 }

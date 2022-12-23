@@ -46,3 +46,6 @@ p {
   fill: blue;
   opacity: 1;
 }
+.selected {
+  fill: orange;
+}
