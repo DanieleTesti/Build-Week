@@ -20,9 +20,7 @@
           a colleague?
         </p>
       </div>
-      <div id="star">
-        
-      </div>
+      <div id="star"></div>
       <div>
         <p>Leave us an open feedback about your experience so far</p>
       </div>
@@ -32,10 +30,14 @@
             id="input"
             type="text"
             placeholder="    Write your comment here"
+            required
+            name="terms"
           />
           <button
             style="height: 60px; width: 250px; font-weight: 800"
             class="nextBtn"
+            type="submit"
+            onclick="inviaFeedback()"
           >
             MORE INFO
           </button>
