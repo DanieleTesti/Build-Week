@@ -12,7 +12,10 @@ main{
 
 }
 .fotoselfie{
-    margin-top: 10em;
+    margin-top: 5em;
+    margin-bottom: 5em;
     height: 15em;
     width: 15em;
+    border-radius: 10em;
+    box-shadow: 8px 5px 6px 5px black;
 }
